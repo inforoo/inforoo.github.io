@@ -1,0 +1,87 @@
+/*---------------------- main blocks and elements ----------------------*/
+body {
+  overflow-y:scroll;
+  background: whitesmoke;
+}
+
+main {
+  margin-top: 3.5rem;  
+  background: white;
+}
+
+footer {
+  text-align: center; 
+  background: white;
+  border-top: 1px solid lightsteelblue;
+}
+
+.container {
+  max-width: 890px; /*992px;*/
+}
+
+h1, 
+h2 {
+  font-size: 1.2em;
+}
+
+main a {
+  color: black;
+}
+
+main a:hover {
+  color: black;
+  background: lightcyan;
+}
+
+/*---------------------- menu styles ----------------------*/
+.navbar a.active,
+.navbar a:hover,
+.navbar a:focus {
+  border-bottom: 1px solid white;
+  outline: none;
+}
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  color: black !important;
+  background: lightcyan !important;  
+}
+.nav-tabs button,
+.nav-tabs button:hover,
+.nav-tabs button:focus {
+  color: black;
+}
+
+/*---------------------- my utilities ----------------------*/
+.my-divider {
+  border-top: 1px solid lightsteelblue;
+}
+
+.my-thick-divider {
+  border-top: 2px solid lightsteelblue;
+}
+
+.my-reference {
+  background: whitesmoke;
+}
+
+.my-reference:hover {
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
+  background: lightcyan;
+}
+
+/*---------------------- mobile menu styles ----------------------*/
+@media (max-width:767px) {
+  .navbar a {
+    padding-left: 10px !important;
+  }
+
+  .navbar a.active,
+  .navbar a:hover {
+    border-style: none;
+    color: black !important;
+    background: lightcyan !important;  
+  }
+  .navbar a:focus {
+    border-style: none;
+  }
+}
