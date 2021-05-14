@@ -1,49 +1,43 @@
-/*---------------------- main blocks and elements ----------------------*/
+/*---------------------- colors ----------------------*/
+:root {
+  --divider-color: lightsteelblue;
+  --highlight-bg-color: lightcyan; 
+  --highlight-color: rgb(0, 87, 87);
+}
+
+/*---------------------- main blocks ----------------------*/
 body {
-  overflow-y:scroll;
+  overflow-y:scroll; /* always show vertical scroll */
+  padding-top: 3.5rem; /* space reserved for fixed top menu */
   background: whitesmoke;
 }
 
 main {
-  margin-top: 3.5rem;  
   background: white;
 }
 
 footer {
   text-align: center; 
   background: white;
-  border-top: 1px solid lightsteelblue;
+  border-top: 1px solid var(--divider-color);
 }
 
 .container {
-  max-width: 890px; /*992px;*/
+  max-width: 890px; 
 }
 
+/*---------------------- elements ----------------------*/
 h1, 
 h2 {
   font-size: 1.2em;
 }
 
-main a {
+a {
   color: black;
 }
-
-main a:hover {
+a:hover {
   color: black;
-  background: lightcyan;
-}
-
-/*---------------------- menu styles ----------------------*/
-.navbar a.active,
-.navbar a:hover,
-.navbar a:focus {
-  border-bottom: 1px solid white;
-  outline: none;
-}
-.dropdown-menu a:hover,
-.dropdown-menu a:focus {
-  color: black !important;
-  background: lightcyan !important;  
+  background: var(--highlight-bg-color);
 }
 .nav-tabs button,
 .nav-tabs button:hover,
@@ -51,37 +45,49 @@ main a:hover {
   color: black;
 }
 
-/*---------------------- my utilities ----------------------*/
-.my-divider {
-  border-top: 1px solid lightsteelblue;
+/*---------------------- menu styles ----------------------*/
+.navbar a.active,
+.navbar a:hover,
+.navbar a:focus {
+  background: inherit;
+  border-bottom: 1px solid white;
+  outline: none;
+}
+.navbar a.dropdown-item:hover,
+.navbar a.dropdown-item:focus {
+  color: var(--highlight-color);
+  background: var(--highlight-bg-color);  
 }
 
+/*---------------------- my utilities ----------------------*/
+.my-divider {
+  border-top: 1px solid var(--divider-color);
+}
 .my-thick-divider {
-  border-top: 2px solid lightsteelblue;
+  border-top: 2px solid var(--divider-color);
 }
 
 .my-reference {
   background: whitesmoke;
 }
-
 .my-reference:hover {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
-  background: lightcyan;
+  background: var(--highlight-bg-color);
 }
 
 /*---------------------- mobile menu styles ----------------------*/
 @media (max-width:767px) {
-  .navbar a {
-    padding-left: 10px !important;
+  .navbar .nav-item a.nav-link {
+    padding-left: 12px; 
+  }
+  .navbar .nav-item a.nav-link.active,
+  .navbar .nav-item a.nav-link:hover {
+    color: var(--highlight-color);
+    background: var(--highlight-bg-color);
+    border-style: none;
+  }
+  .navbar .nav-item a.nav-link:focus {
+    border-style: none;
   }
 
-  .navbar a.active,
-  .navbar a:hover {
-    border-style: none;
-    color: black !important;
-    background: lightcyan !important;  
-  }
-  .navbar a:focus {
-    border-style: none;
-  }
 }
