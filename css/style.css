@@ -46,12 +46,20 @@ a:hover {
 }
 
 /*---------------------- menu styles ----------------------*/
-.navbar .navbar-brand {
-  padding-left: 12px;   
+.navbar a.navbar-brand,
+.navbar a.navbar-brand:hover,
+.navbar a.navbar-brand:focus {
+  margin-left: 12px;   
+  color: var(--highlight-bg-color);
+  background: inherit;
+  outline: none;
 }
-.navbar a.active,
-.navbar a:hover,
-.navbar a:focus {
+/*.navbar a.navbar-brand:focus {
+  border-bottom: 1px solid white;
+} */ 
+.navbar .nav-item a.active,
+.navbar .nav-item a:hover,
+.navbar .nav-item a:focus {
   background: inherit;
   border-bottom: 1px solid white;
   outline: none;
