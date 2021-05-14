@@ -46,6 +46,9 @@ a:hover {
 }
 
 /*---------------------- menu styles ----------------------*/
+.navbar .navbar-brand {
+  padding-left: 12px;   
+}
 .navbar a.active,
 .navbar a:hover,
 .navbar a:focus {
