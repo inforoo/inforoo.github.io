@@ -1,8 +1,22 @@
-/*---------------------- colors ----------------------*/
+/* Content
+
+  - color scheme
+  - main blocks
+  - html elements
+  - bootstrap override 
+  - tabs style
+  - menu style
+  - mobile menu style
+
+*/
+
+/*---------------------- color scheme ----------------------*/
 :root {
   --divider-color: lightsteelblue;
-  --highlight-bg-color: lightcyan; 
-  --highlight-color: rgb(0, 87, 87);
+  --highlight-color: lightcyan; 
+  --menu-color: rgba(0, 87, 87, 0.9);
+/*- white, whitesmoke for background;
+  - black for links color; */
 }
 
 /*---------------------- main blocks ----------------------*/
@@ -26,48 +40,17 @@ footer {
   max-width: 890px; 
 }
 
-/*---------------------- elements ----------------------*/
+/*---------------------- html elements ----------------------*/
 h1, 
 h2 {
   font-size: 1.2em;
 }
-
 a {
   color: black;
 }
 a:hover {
   color: black;
-  background: var(--highlight-bg-color);
-}
-.nav-tabs button,
-.nav-tabs button:hover,
-.nav-tabs button:focus {
-  color: black;
-}
-
-/*---------------------- menu styles ----------------------*/
-.navbar a.navbar-brand,
-.navbar a.navbar-brand:hover,
-.navbar a.navbar-brand:focus {
-  margin-left: 12px;   
-  color: var(--highlight-bg-color);
-  background: inherit;
-  outline: none;
-}
-/*.navbar a.navbar-brand:focus {
-  border-bottom: 1px solid white;
-} */ 
-.navbar .nav-item a.active,
-.navbar .nav-item a:hover,
-.navbar .nav-item a:focus {
-  background: inherit;
-  border-bottom: 1px solid white;
-  outline: none;
-}
-.navbar a.dropdown-item:hover,
-.navbar a.dropdown-item:focus {
-  color: var(--highlight-color);
-  background: var(--highlight-bg-color);  
+  background: var(--highlight-color);
 }
 
 /*---------------------- my utilities ----------------------*/
@@ -83,22 +66,80 @@ a:hover {
 }
 .my-reference:hover {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
-  background: var(--highlight-bg-color);
+  background: var(--highlight-color);
 }
 
-/*---------------------- mobile menu styles ----------------------*/
+/*---------------------- bootstrap override ----------------------*/
+.text-danger {
+  color: red !important; /* scss: $danger */
+}
+
+/*---------------------- tabs style ----------------------*/
+.nav-tabs button,
+.nav-tabs button.nav-link.active,
+.nav-tabs button.nav-link:hover,
+.nav-tabs button.nav-link:focus {
+  color: black;
+}
+
+/*---------------------- menu general style ----------------------*/
+.bg-dark {
+  background: var(--menu-color) !important; /* scss: $dark */
+}
+.navbar a.navbar-brand {
+  margin-left: 12px;   
+  color: white;
+  background: inherit;
+}
+.navbar .nav-item a.nav-link {
+  color: white; /* scss: $navbar-dark-color */
+}
+.navbar a.dropdown-item {
+  color: white; /* scss: $dropdown-dark-color */
+}
+.dropdown-menu-dark {
+  background: var(--menu-color); /* scss: $dropdown-dark-bg */
+}
+
+/*---------------------- menu action style ----------------------*/
+.navbar a.navbar-brand:hover,
+.navbar a.navbar-brand:focus {
+  border-bottom: 1px solid white;
+  outline: none;
+}
+.navbar .nav-item a.nav-link.active,
+.navbar .nav-item a.nav-link:hover,
+.navbar .nav-item a.nav-link:focus {
+  color: white; /* scss: $navbar-dark-hover-color */
+  background: inherit;
+  border-bottom: 1px solid white;
+  outline: none;
+}
+.navbar a.dropdown-item:hover,
+.navbar a.dropdown-item:focus {
+  color: black;
+  background: var(--highlight-color);  
+}
+.navbar .navbar-toggler:hover,
+.navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 4px var(--highlight-color);
+}
+
+/*---------------------- mobile menu style ----------------------*/
 @media (max-width:767px) {
+  .navbar-nav {
+    padding-top: 10px;
+  }
   .navbar .nav-item a.nav-link {
     padding-left: 12px; 
   }
   .navbar .nav-item a.nav-link.active,
   .navbar .nav-item a.nav-link:hover {
-    color: var(--highlight-color);
-    background: var(--highlight-bg-color);
+    color: black;
+    background: var(--highlight-color);
     border-style: none;
   }
   .navbar .nav-item a.nav-link:focus {
     border-style: none;
   }
-
 }
