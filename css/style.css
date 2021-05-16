@@ -1,12 +1,15 @@
 /* Content
 
-  - color scheme
-  - main blocks
-  - html elements
-  - bootstrap override 
-  - tabs style
-  - menu style
-  - mobile menu style
+  color scheme
+  layout
+  typography
+  utilities (bootstrap overwritten)
+  my utilities
+  components (bootstrap overwritten)
+  - tabs 
+  - menu desktop
+  - menu desktop actions
+  - menu mobile
 
 */
 
@@ -19,7 +22,7 @@
   - black for links color; */
 }
 
-/*---------------------- main blocks ----------------------*/
+/*---------------------- layout ----------------------*/
 body {
   overflow-y:scroll; /* always show vertical scroll */
   padding-top: 3.5rem; /* space reserved for fixed top menu */
@@ -40,7 +43,7 @@ footer {
   max-width: 890px; 
 }
 
-/*---------------------- html elements ----------------------*/
+/*---------------------- typography ----------------------*/
 h1, 
 h2 {
   font-size: 1.2em;
@@ -51,6 +54,11 @@ a {
 a:hover {
   color: black;
   background: var(--highlight-color);
+}
+
+/*---------------------- utilities ----------------------*/
+.text-danger {
+  color: red !important; /* scss: $danger */
 }
 
 /*---------------------- my utilities ----------------------*/
@@ -69,12 +77,8 @@ a:hover {
   background: var(--highlight-color);
 }
 
-/*---------------------- bootstrap override ----------------------*/
-.text-danger {
-  color: red !important; /* scss: $danger */
-}
-
-/*---------------------- tabs style ----------------------*/
+/*---------------------- components ----------------------*/
+/*---------------------- tabs ----------------------*/
 .nav-tabs button,
 .nav-tabs button.nav-link.active,
 .nav-tabs button.nav-link:hover,
@@ -82,7 +86,7 @@ a:hover {
   color: black;
 }
 
-/*---------------------- menu general style ----------------------*/
+/*---------------------- menu desktop ----------------------*/
 .bg-dark {
   background: var(--menu-color) !important; /* scss: $dark */
 }
@@ -101,7 +105,7 @@ a:hover {
   background: var(--menu-color); /* scss: $dropdown-dark-bg */
 }
 
-/*---------------------- menu action style ----------------------*/
+/*---------------------- menu desktop actions ----------------------*/
 .navbar a.navbar-brand:hover,
 .navbar a.navbar-brand:focus {
   border-bottom: 1px solid white;
@@ -125,7 +129,7 @@ a:hover {
   box-shadow: 0 0 0 4px var(--highlight-color);
 }
 
-/*---------------------- mobile menu style ----------------------*/
+/*---------------------- menu mobile ----------------------*/
 @media (max-width:767px) {
   .navbar-nav {
     padding-top: 10px;
