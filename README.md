@@ -6,7 +6,7 @@ Static website, using HTML + CSS
 ## Requirements
 
     "bootstrap": "5.0.1",
-    "popper.js": "1.16.1"
+    "popper.js": "1.16.1" (popovers are not used in a project yet)
 
 ## Style
 
