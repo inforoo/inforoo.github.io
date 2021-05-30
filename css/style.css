@@ -94,9 +94,11 @@ a:hover {
   margin-left: 12px;   
   color: white;
   background: inherit;
+  border-bottom: 1px solid transparent;
 }
 .navbar .nav-item a.nav-link {
   color: white; /* scss: $navbar-dark-color */
+  border-bottom: 1px solid transparent;
 }
 .navbar a.dropdown-item {
   color: white; /* scss: $dropdown-dark-color */
