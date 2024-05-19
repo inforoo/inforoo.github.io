@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <title>Mathsalon</title>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Mathematical Salon, Saint-Petersburg">
+    <meta name="keywords" content="mathematics, science, conferences, seminar">
+    <meta name="author" content="Mathsalon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:image" content="logo.png"/>
+    <!-- og:title, og:description -->
+ 
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142593554-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-142593554-1');
+    </script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="about.html">Mathsalon</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navbar-nav-scroll" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Main</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="raex.html">RAEX</a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link" href="integrals.html">Integrals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="positivity.html">Positivity</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Seminar
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="seminar-2024.html">Tips and Tricks Day 2024</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="seminar.html">On seminar</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="seminar-2020-1.html">Year 2020/2021</a>
+                        <a class="dropdown-item" href="seminar-2019-2.html">Second semester 2019 </a>
+                        <a class="dropdown-item" href="seminar-2019-1.html">First semester 2019</a>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="ms-auto navbar-nav">    
+                <li class="nav-item">
+                    <a class="nav-link" href="contacts.html">Contacts</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+    
+<main class="container flex-grow-1 p-4" role="main">
+    <div class="row">
+        <!-- Information -->
+        <div class="col-md-2">
+            <h1>Information</h1>
+        </div>
+        <div class="col-md-10">
+            <p>Оnline talks, May 19, 2024</p>
+            <p>This is our first event of such a kind. 
+                The participants are students of ITMO University. 
+                The participants were divided into teams. 
+                The goal is to demonstrate a non-standard technical approach to problem solving.</p>
+            <br>
+        </div>  
+        <!-- Schedule -->        
+        <div class="col-md-2">
+            <h1>Talks</h1>
+        </div>
+        <div class="col-md-10">
+            <div class="pt-3 pb-2 my-divider">                  
+                <p><b>Духанин и Петухоff</b> [Духанин Кирилл, Петухов Дмитрий]</p>
+                <div class="px-4">
+                    <b>Применение техники интроспекции 
+                        к методу Нелдера-Мида библиотеки scipy.optimize</b> 
+                    <p>Метод Nelder-Mead библиотеки scipy.optimize 
+                        возвращает только текущее значение 
+                        выбранной точки пространства параметров. 
+                        В работе, для получения остальных координат соответствующего симплекса, 
+                        была применена техника интроспекции кода библиотеки. 
+                        Полученные данные были визуализированны.</p>
+                </div>
+            </div> 
+
+            <div class="pt-3 pb-2 my-thick-divider">                  
+                <p><b>Даниил Новосёлов</b></p>
+                <div class="px-4">
+                    <b>Make your own Newton</b> 
+                    <p>Генерируем высокоэффективный вариант из sympy выражения.</p>
+                </div>     
+            </div>
+            <div class="pt-3 pb-2 my-divider">                  
+                <p><b>Алёна</b> [Ситкина Алёна, Нотфуллин Камиль, Никитин Богдан]</p>
+                <div class="px-4">
+                    <b>Контрпримеры для некоторых методов оптимизации</b>
+                    <p>Расскажем про несколько функций, 
+                    где не все методы находят глобальный минимум 
+                    (в том числе проиллюстрируем результат), 
+                    а также приведем пример, для которого не работает метод Вольфы, 
+                    с объяснением причины.</p>
+                </div>
+            </div>    
+            <div class="pt-3 pb-2 my-divider">                  
+                <p><b>DROP TABLE</b> [Горбунов Никита, Кузнецов Сергей, Родионов Артемий, Челебаев Михаил]</p>
+                <div class="px-4">
+                    <b>“Стабилизация” метода Ньютона</b> 
+                    <p>Хотя метод Ньютона зачастую работает и быстрее методов первого порядка, 
+                        у него есть большой недостаток: 
+                        на многих функциях он работает некорректно. 
+                        Это связано с тем, что этот метод не гарантирует, 
+                        что направление движения всегда будет в сторону уменьшения функции. 
+                        Иногда это приводит к неожиданным и неприятным последствиям. 
+                        Например, алгоритм может бесконечно ходить по циклу из нескольких точек.
+                        А это, в свою очередь, может привести к тому, что 
+                        казалось бы “более стабильный” метод (с меньшим шагом) будет зависать, 
+                        в то время как другие будут работать нормально. 
+                        Поэтому в нашем докладе мы рассмотрим способы решения 
+                        проблемы нестабильности метода Ньютона.
+                    </p>
+                </div>
+            </div>
+            <div class="pt-3 pb-2 my-divider">                  
+                <p><b>Гоша</b> [Грушевский Георгий, Алексеев Никита, Девятериков Максим]</p>
+                <div class="px-4">
+                    <b>Применение отечественных технологий для решения задачи оптимизации</b>
+                    <p>Для решения классических задач оптимизации в стандартной постановке
+                        уже давно существуют проверенные инструменты, 
+                        такие как специализированные библиотеки Python.
+                        Однако, докладчикам не захотелось ограничиваться использованием готового ПО.
+                        Команде захотелось применить инновационные технологии для
+                        решения классических задач. 
+                        В докладе будет описаны конструкции, которые были написаны с нуля,
+                        пусть это даже было нелепо и неэффективно, зато интересно и смешно!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="container p-3">
+    Mathematical Salon | Saint-Petersburg    
+</footer>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/popper.min.js"></script>
+
+</body>
+
+</html>
